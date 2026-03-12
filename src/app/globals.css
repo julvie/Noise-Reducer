@@ -114,6 +114,12 @@ a {
   font-size: 22px;
 }
 
+.panel-subtitle {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #4c556f;
+}
+
 .eyebrow {
   margin: 0;
   font-size: 11px;
@@ -138,11 +144,73 @@ a {
   gap: 18px;
 }
 
+.date-scroller {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(30, 40, 80, 0.08);
+}
+
+.date-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.date-pill {
+  border: 1px solid rgba(20, 19, 25, 0.2);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: #f7f8fb;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.date-pill.active {
+  background: #1a2035;
+  color: #f6f7fb;
+  border-color: transparent;
+}
+
 .summary-card {
   border-radius: 18px;
   padding: 18px;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(20, 19, 25, 0.08);
+}
+
+.connection-card {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 220px;
+}
+
+.connection-title {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.connection-status {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.connection-meta {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .summary-index {
@@ -194,6 +262,18 @@ a {
   margin: 6px 0 0;
   font-size: 13px;
   color: #5b5f7a;
+}
+
+.todo-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #1a2035;
+  text-decoration: underline;
+}
+
+.classroom-link {
+  margin-bottom: 14px;
 }
 
 .truth-list {
@@ -317,6 +397,44 @@ a {
   font-family: inherit;
 }
 
+.chat-window {
+  min-height: 180px;
+  background: #f5f7ff;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(20, 19, 25, 0.08);
+  margin-bottom: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.chat-empty {
+  font-size: 13px;
+  color: #5b5f7a;
+}
+
+.chat-line {
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 19, 25, 0.08);
+}
+
+.chat-input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.chat-input input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 19, 25, 0.15);
+  font-family: inherit;
+}
+
 .button {
   border: none;
   border-radius: 999px;
@@ -362,6 +480,11 @@ a {
   .truth-actions {
     grid-auto-flow: column;
     justify-content: start;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
